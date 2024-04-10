@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Toilet Finder</title>
+    </head>
+    <body>
+        <header></header>
+        <nav></nav>
+        <main>
+            <h1>Find Your Next Toilet!</h1>
+            <h3>What is the Distance from "Wall" to "Outlet"?</h3>
+                <input>
+                <p></p>
+
+                <script>
+                    
+                    let x = parseFloat(prompt('Input A Number'))
+                    likeThatHuh(x)
+                    function likeThatHuh(x) {
+                        if (isNaN(x)) {
+                            alert("it's not looking good brevs 😎")
+                        } else {
+                            alert(x + ' is a special number 🥰')
+                        }}
+
+
+
+
+                    const input = document.querySelector('input')
+                    const paraOne = document.querySelector('p')
+
+                    input.addEventListener ('change', () => {
+                        const num = parseFloat(input.value)
+                        if (num === isNaN(num)) {
+                            paraOne.textContent = "Please Enter A Number!"
+                        } 
+                        if (num <= 0) {
+                            paraOne.textContent = "Toilets Cannot Be Installed With a Negative Number! Apprentice Detected 🫵😂"
+                        } 
+                        if (num > 0 && num <= 50) {
+                            paraOne.textContent = "Outlet Pipe Must Be Moved 🛠️ (Recommended)"
+                        } 
+                        if (num > 50 && num <= 200) {
+                            paraOne.textContent = "Back To Wall Toilet or Link Suite Toilet (Recommended 🥰) "
+                        }
+                        if (num > 200 && num < 400) {
+                            paraOne.textContent = "Link Suite Toilet (Recommended) "
+                        }
+                        if (num > 400) {
+                            paraOne.textContent = `${num}mm is Too High! Toilets Only Exist Up To 400mm!`
+                        }
+                    })
+                </script>
+
+        </main>
+        <footer></footer>
+    </body>
+</html>
+
